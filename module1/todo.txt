@@ -1,0 +1,9 @@
+Module 1: Python Fundamentals
+•	Python installation, virtual environments
+•	Variables, data types, type casting
+•	Operators and expressions
+•	Conditional statements
+•	Loops (for, while)
+•	Functions and lambda expressions
+•	Basic input/output
+•	Error handling and exceptions
