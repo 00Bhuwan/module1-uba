@@ -10,6 +10,9 @@ dict_eg = {
     "edu": 9
     }
 
+dict_new = dict(apple='round', banana='long', pear='oval')
+print(dict_new)
+
 # To access
 # You can use .get() method or use key from dict
 print(dict_eg['age'])
