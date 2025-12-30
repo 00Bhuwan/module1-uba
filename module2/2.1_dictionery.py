@@ -52,3 +52,8 @@ thisdict.update({"color": 'red'})
 thisdict.pop('color')       # removes color key value 
 del thisdict["runs on"]     # removes runs on
 # if no parameter passed removes thisdict dictionery
+
+
+# tuple is hashable so can be used as key in dict
+eg = {(1, 2): True, 3: False}
+print(eg)
