@@ -1,7 +1,7 @@
 # Are placed inside square brackets []
 # Ordered and indexed
 # Allows duplicate values
-# can be made using list() function
+# can be made using list() constructor
 # list can contain different data types (cannot have set as element)
 
 import random
@@ -35,13 +35,16 @@ example_3 = [1, 2, [3, 4, 5], ('a', 'b', 'c'), {'key1': 'value1', 'key2': 'value
 # cannot have set as element gives error ''TypeError: 'set' object is not subscriptable''
 # similary set cannot have list and dict as element because are mutable and unhashable
 
+# access using loop
+for item in example_3:
+    print(item)
 
-# Indexing and Slicing: list[start:stop:step]
+# Indexing[index value(starts at 0)] and Slicing: list[start:stop:step]
 print(example_3[0])        # first element
 print(example_3[-1])       # last element
 print(example_3[2:5])      # slicing
 print(example_3[::2])      # skipping elements
-print(example_3[::-1])     # reversing the list
+print(example_3[::-1])     # reversing the list 
 print(example_3[2][1])     # accessing element inside nested list/tuple/dict
 
 # some methods of list
