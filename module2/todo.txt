@@ -1,0 +1,7 @@
+Module 2: Data Structures and Core Concepts
+•	Lists, tuples, sets, dictionaries
+•	List and dictionary comprehensions
+•	String manipulation
+•	File handling (CSV, JSON, TXT)
+•	Modules and packages
+•	Object-Oriented Programming (classes, objects, inheritance, polymorphism)

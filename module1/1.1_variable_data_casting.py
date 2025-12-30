@@ -70,6 +70,8 @@ dict_var = {'name': 'Alice', 'age': 30}
 # set
 set_var = {1, 2, 3, 'apple', 'banana'}
 # unordered collection of unique items, mutable
+# i.e cannot acces using index value set_var[0] will raise error
+set_eg = {1,2,'ram', [1,5], True}
 
 # frozenset
 frozenset_var = frozenset([1, 2, 3, 'apple'])
