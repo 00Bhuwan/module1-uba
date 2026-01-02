@@ -1,0 +1,7 @@
+Module 3: Python for Data Handling
+•	NumPy fundamentals (arrays, vectorization, broadcasting)
+•	Pandas basics (Series, DataFrame)
+•	Data cleaning and preprocessing
+•	Handling missing values
+•	Data aggregation and grouping
+•	Reading data from databases and APIs

@@ -57,3 +57,25 @@ del thisdict["runs on"]     # removes runs on
 # tuple is hashable so can be used as key in dict
 eg = {(1, 2): True, 3: False}
 print(eg)
+
+
+# To change value in dict
+dict_eg = {
+    "name": 'ram',
+    "age": 23,
+    "edu": 'HM',  # gets overwritten by the next "edu" key-value pair
+    "edu": 9
+    }
+
+# to change value in dict
+dict_eg['age'] = 60
+dict_eg.update({'name': 'shyam'})
+print(dict_eg)
+
+# To change keys in dict
+dict_eg['identity'] = dict_eg['name']
+del dict_eg['name']
+
+# or use
+dict_eg['no_years'] = dict_eg.pop('age')
+print(dict_eg)

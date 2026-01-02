@@ -1,0 +1,84 @@
+Project 2: Simple Bank Account System
+
+Goal
+Simulate a banking system with different account types using OOP.
+
+Core concepts covered
+
+Inheritance
+
+Polymorphism
+
+Encapsulation
+
+Method overriding
+
+Business logic separation
+
+Functional requirements
+
+Create a bank account
+
+Deposit money
+
+Withdraw money (with validation)
+
+View account details
+
+Support multiple account types
+
+Suggested classes
+
+BankAccount (base class)
+
+accountNumber
+
+accountHolderName
+
+balance
+
+deposit()
+
+withdraw()
+
+SavingsAccount extends BankAccount
+
+interestRate
+
+calculateInterest()
+
+override withdraw() (minimum balance rule)
+
+CurrentAccount extends BankAccount
+
+overdraftLimit
+
+override withdraw()
+
+BankService
+
+createAccount()
+
+findAccount()
+
+listAccounts()
+
+Main / App
+
+console menu
+
+Optional extensions
+
+Transaction history class
+
+Monthly interest calculation
+
+Custom exceptions (InsufficientBalanceException)
+
+Deliverables
+
+UML class diagram (basic)
+
+Well-named methods and variables
+
+Proper use of access modifiers
