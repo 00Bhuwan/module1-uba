@@ -70,6 +70,11 @@ class BankAccount:
         else:
             self.balance -= amount
 
+class SavingAccount(BankAccount):
+    def __init__(self):
+        super().__init__(self)
+        self.interest = 0.0278
+        
 
 class BankService:
     def __init__(self, accounts):
@@ -93,7 +98,7 @@ class BankService:
             email = input("Enter email: ")
             if email.endswith("@gmail.com"):
                 break
-            for email in self.accounts:
+            for acc in self.accounts:
                 if email == acc.email:
                     print("Account already exists")
             print("Invalid email!")

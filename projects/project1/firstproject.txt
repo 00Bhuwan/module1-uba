@@ -43,15 +43,15 @@ withdraw()
 
 SavingsAccount extends BankAccount
 
-interestRate
+interestRate    2.78%
 
-calculateInterest()
+calculateInterest()    
 
 override withdraw() (minimum balance rule)
 
 CurrentAccount extends BankAccount
 
-overdraftLimit
+overdraftLimit :overdraft limit in a current account is a pre-approved credit facility allowing you to withdraw funds beyond your actual balance, up to a set maximum, acting as a financial safety net for short-term needs, with interest charged only on the utilized amount, and limits varying based on your creditworthiness, account history, and income, often requiring annual review and renewal. 
 
 override withdraw()
 
