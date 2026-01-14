@@ -2,3 +2,4 @@ practice
 .venv
 make.txt
 output.csv
+.env
