@@ -113,3 +113,30 @@ print(tuple(list_fruits))               # converts list to tuple
 print(dict([('name', 'Alice'), ('age', 30)])) # creates dictionary from list of tuples
 print(set(list_fruits))                 # converts list to set
 # set conversion removes duplicates if any
+
+
+# variable destructuring 
+x = 5, 11
+type(x)            # gives a tuple
+
+dict_var = {'name': 'Alice', 'age': 30}
+print(list(dict_var.items()))           # gives tuple inside the list
+for item in dict_var.items():
+    print(item)                     # gives separate tuple combine key and value
+
+
+# for data unpacking use of _ is for the varibale which will not be used in future. eg is 
+person = ('bob', 43, 'Mech')
+_, _, profession = person
+print(profession)
+
+# 
+new_ppl = [("bob", 42, 'singer'), ('james', 23, 'artist'), ('harry', 33, 'lecturer')]
+for name, age, profession in new_ppl:
+    print(f'Name: {name}, Age: {age}, Profession: {profession}')
+
+for person in new_ppl:
+    print(f'Name: {person[0]}, Age: {person[1]}, Profession: {person[2]}')
+
+head, *tail = [1, 2, 3, 4, 5]
+print(head, tail)

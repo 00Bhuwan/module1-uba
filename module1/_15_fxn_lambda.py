@@ -77,3 +77,24 @@ def factorial(n):
 
 
 print(factorial(5))  # Output: 120
+
+
+def say_hello(name, surname):
+    print(f"HEllo, {name} {surname}")
+say_hello("bob", 'smith')
+
+say_hello(surname="smith", name="bob")             # cannot expect compiler to auto asign if only 1 argument is passed 
+# say_hello(surname="Smith", 'bob')              # gives, error 
+
+# especially used for 
+def divide(dividend, divisor):
+    if divisor != 0:
+        print(dividend/divisor)
+    else:
+        print("FOolish")
+    
+divide(dividend=12, divisor=0)           # works
+divide(12, 0)                            # works
+divide(15, divisor=0)                   # works            
+# divide(dividend=15, 0)                  # doesn't work : gives error
+# # Note: Must pass postional argument then the keyword parameter later
