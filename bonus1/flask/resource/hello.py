@@ -1,12 +1,16 @@
 from flask.views import MethodView
 from flask_smorest import Blueprint, abort
+from schemas import HelloSchema
 
-blp = Blueprint('hello', __name__, description="")
+blp = Blueprint('hello', 'tags', description="")
 
 @blp.route("/hello")
-class Hello(MethodView):
-    def get(self):
-        try:
-            return {"message": 'Hello World'}
-        except:
-            abort(404, message="Routing Error")
+class FormHello(MethodView):
+    @blp.arguments(HelloSchema)
+    def post(self, data):
+        return "hello" + " " + data['name']
+        
+    @blp.arguments(HelloSchema)
+    @blp.response(201, HelloSchema)
+    def put(self, data):
+        print(data)
