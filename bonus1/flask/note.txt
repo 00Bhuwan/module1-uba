@@ -15,3 +15,28 @@ from flask_smorest import Api
 api = Api(app)
 
 Swagger only documents flask-smorest blueprints, not @app.route.
+
+# .flaskenv
+contains the env variable for flask app
+
+# .env
+confidential files that are not to be shared in github repo eg. apikeys, credentials, etc
+
+# app.py
+main place 
+
+# /models/__init__.py
+to make the files inside the models directory work as a package
+
+# /models/hellodata
+where the table is defined and each instance of the class is equal to a row in databse
+
+# db.py
+we used sql alchemy here to initialize database
+
+# resource
+used for routing here only user id, name, place, number used so only file hello.py
+make different file for different routing
+
+# schemas.py
+schemas are where the identity for variable is defined we use that schema to implement methods to user database
