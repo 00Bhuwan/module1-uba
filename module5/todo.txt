@@ -1,0 +1,6 @@
+Module 5: Mathematics for AI (with Python)
+•	Linear algebra (vectors, matrices, dot product)
+•	Probability basics
+•	Statistics (mean, median, variance, standard deviation)
+•	Gradient descent intuition
+•	Cost and loss functions

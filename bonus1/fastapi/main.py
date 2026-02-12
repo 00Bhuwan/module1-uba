@@ -1,0 +1,38 @@
+from fastapi import FastAPI, APIRouter, HTTPException
+from configuration import collection
+from database.schemas import all_tasks
+from database.models import Todo
+from datetime import datetime
+from bson.objectid import ObjectId
+
+app = FastAPI()
+router = APIRouter()
+
+@router.get("/")
+async def get_all_todos():
+    data = collection.find()
+    return all_tasks(data)
+
+@router.post("/")
+async def create_task(new_task: Todo):
+    try:
+        resp = collection.insert_one(dict(new_task))
+        return {"status_code": 200, "id": str(resp.inserted_id)}
+
+    except Exception as e:
+        return HTTPException(status_code=500, detail=f"Some error occured {e}")
+    
+@app.router("/{task_id}")
+async def update_task(task_id: str, updated_task: Todo):
+    try:
+        id = ObjectId(task_id)
+        exesting_doc = collection.find_one({"id": id, "is_deleted": False})
+        if not exesting_doc:
+            return HTTPException(status_code=401, detail="Task doesn't exist.")
+        updated_task.updated_at = datetime.timestamp(datetime.now())
+        resp = collection.update_one({"id":id}, {"$set": dict(updated_task)})
+        return {"status_code": 200, "message": "Task Updated Successfully"}
+    except Exception as e:
+        return HTTPException(status_code=500, detail=f"Some error occured {e}.")
+
+app.include_router(router)
