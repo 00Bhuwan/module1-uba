@@ -1,0 +1,6 @@
+Module 7: Feature Engineering and Model Optimization
+•	Feature scaling (StandardScaler, MinMaxScaler)
+•	Encoding categorical data
+•	Feature selection
+•	Hyperparameter tuning (GridSearch, RandomSearch)
+•	Handling imbalanced datasets

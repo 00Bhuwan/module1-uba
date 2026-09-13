@@ -1,0 +1,9 @@
+Module 6: Machine Learning with Python
+•	Introduction to Machine Learning
+•	Supervised vs Unsupervised learning
+•	Regression (Linear, Logistic)
+•	Classification (KNN, Naive Bayes, Decision Trees, Random Forest)
+•	Clustering (K-Means, Hierarchical)
+•	Model evaluation (accuracy, precision, recall, F1-score)
+•	Cross-validation
+•	Scikit-learn workflow
